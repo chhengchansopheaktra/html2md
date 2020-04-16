@@ -35,7 +35,7 @@ jobs:
           node-version: 12
           registry-url: https://registry.npmjs.org/
       - run: npm ci
-      - run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TK }}" > ~/.npmrc
+      - run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TK }}" > .npmrc
       - run: npm publish
 
   publish-gpr:
