@@ -1,12 +1,13 @@
 {
   "name": "@chhengchansopheaktra/html2md",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "description": "A CLI to convert html to markdown.",
   "bin": {
     "@chhengchansopheaktra/html2md": "bin/cli.js",
     "html2md": "bin/cli.js"
   },
   "publishConfig": {
+    "access": "public",
     "registry": "https://npm.pkg.github.com/"
   },
   "scripts": {
