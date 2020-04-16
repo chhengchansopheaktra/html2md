@@ -1,14 +1,13 @@
 {
   "name": "@chhengchansopheaktra/html2md",
-  "version": "1.0.16",
+  "version": "1.0.17",
   "description": "A CLI to convert html to markdown.",
   "bin": {
     "@chhengchansopheaktra/html2md": "bin/cli.js",
     "html2md": "bin/cli.js"
   },
   "publishConfig": {
-    "access": "public",
-    "registry": "https://npm.pkg.github.com/"
+    "access": "public"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
