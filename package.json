@@ -1,0 +1,36 @@
+{
+  "name": "@chhengchansopheaktra/html2md",
+  "version": "1.0.8",
+  "description": "A CLI to convert html to markdown.",
+  "main": "index.js",
+  "bin": {
+    "@chhengchansopheaktra/html2md": "bin/cli.js",
+    "html2md": "bin/cli.js"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "cli",
+    "html to markdown",
+    "html2markdown",
+    "html2md",
+    "htmltomd"
+  ],
+  "author": "Chheng Chansopheaktra",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Chhengchansopheaktra/html2md.git"
+  },
+  "dependencies": {
+    "esm": "^3.2.25",
+    "array-back": "^4.0.1",
+    "command-line-tool": "^0.8.0",
+    "config-master": "^3.1.0",
+    "turndown": "^6.0.0"
+  }
+}
