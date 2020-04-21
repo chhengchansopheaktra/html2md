@@ -57,14 +57,30 @@ if (options.help) {
           }
           var turndownService = new TurndownService();
           turndownService.addRule("head", {
-            filter: ["title", "style", "meta"],
+            filter: ["head", "style", "meta"],
             replacement: function (content, node) {
-              return "* * *";
+              console.log(content)
+              return "";
             },
           });
-          
-          var toFile = path.join(moveTo, file.replace(/^.*[\\\/]/, '')).replace(".html", ".md");
+
+          turndownService.addRule("title", {
+            filter: ["title"],
+            replacement: function (content, node) {
+              return (`---\nid: ${file
+                .replace(/^.*[\\\/]/, "")
+                .replace(
+                  ".html",
+                  ""
+                )}\ntitle: ${content}\nsidebar_label: ${content}\n---\n* * *`);
+            },
+          });
+
+          var toFile = path
+            .join(moveTo, file.replace(/^.*[\\\/]/, ""))
+            .replace(".html", ".md");
           var markdown = turndownService.turndown(html);
+          markdown = markdown.replace(' ---', '---')
           fs.writeFileSync(toFile, markdown);
         });
       } else if (stat.isDirectory()) {

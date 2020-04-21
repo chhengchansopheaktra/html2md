@@ -1,7 +1,7 @@
 {
   "name": "@chhengchansopheaktra/html2md",
   "version": "1.0.18",
-  "description": "A CLI to convert html to markdown.",
+  "description": "A CLI to convert html to markdown using turndown.",
   "bin": {
     "html2md": "bin/cli.js"
   },
